@@ -5,9 +5,6 @@ build
 .DS_Store
 .project
 /metadata.json
-/native-project/Pods
-/native-project/Podfile.lock
-native-project/test.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*
 *.xcuserstate
-titanium-material.xcodeproj/project.xcworkspace/xcuserdata/*
-titanium-material.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcodeproj/xcuserdata
