@@ -6,10 +6,11 @@
  */
 
 #import "TiCarplayModule.h"
+#import "TiApp.h"
 #import "TiBase.h"
+#import "TiCarplayInterfaceControllerProxy.h"
 #import "TiHost.h"
 #import "TiUtils.h"
-#import "TiApp.h"
 
 @implementation TiCarplayModule
 
@@ -41,15 +42,23 @@
 
 #pragma Public APIs
 
-- (void)application:(nonnull UIApplication *)application didConnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController toWindow:(nonnull CPMapContentWindow *)window {
+- (void)application:(nonnull UIApplication *)applicationdidConnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController toWindow:(nonnull CPMapContentWindow *)window
+{
   if ([self _hasListeners:@"didConnect"]) {
-    [self fireEvent:@"didConnect"];
+    [self fireEvent:@"didConnect"
+         withObject:@{
+           @"interfaceController" : [[TiCarplayInterfaceControllerProxy alloc] _initWithPageContext:self.pageContext andInterfaceController:interfaceController]
+         }];
   }
 }
 
-- (void)application:(nonnull UIApplication *)application didDisconnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController fromWindow:(nonnull CPMapContentWindow *)window {
+- (void)application:(nonnull UIApplication *)application didDisconnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController fromWindow:(nonnull CPMapContentWindow *)window
+{
   if ([self _hasListeners:@"didDisconnect"]) {
-    [self fireEvent:@"didDisconnect"];
+    [self fireEvent:@"didDisconnect"
+         withObject:@{
+           @"interfaceController" : [[TiCarplayInterfaceControllerProxy alloc] _initWithPageContext:self.pageContext andInterfaceController:interfaceController]
+         }];
   }
 }
 
@@ -63,7 +72,7 @@
 - (void)application:(UIApplication *)application didSelectManeuver:(CPManeuver *)maneuver
 {
   if ([self _hasListeners:@"didSelectManeuver"]) {
-    [self fireEvent:@"didSelectManeuver" withObject:@{ @"maneuver": @{ @"userInfo": NULL_IF_NIL(maneuver.userInfo) } }];
+    [self fireEvent:@"didSelectManeuver" withObject:@{@"maneuver" : @{ @"userInfo" : NULL_IF_NIL(maneuver.userInfo) }}];
   }
 }
 

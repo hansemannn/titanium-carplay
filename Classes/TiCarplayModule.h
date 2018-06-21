@@ -8,8 +8,7 @@
 #import "TiModule.h"
 #import <CarPlay/CarPlay.h>
 
-@interface TiCarplayModule : TiModule<CPApplicationDelegate> {
-
+@interface TiCarplayModule : TiModule <CPApplicationDelegate> {
 }
 
 @end

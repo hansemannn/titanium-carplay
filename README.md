@@ -12,14 +12,31 @@ Use the iOS 12+ CarPlay framework in Appcelerator Titanium.
 
 - [x] Receive events from your CarPlay instance
 - [ ] Present CarPlay-specific user-interfaces
+  - [x] Use Map templates to start a trip from CarPlay
+  - [ ] Use List- and Grid-templates for selections
+  - [ ] Use Alerts and Dialogs
 
 ## Example
 
 ```js
 import CarPlay from 'ti.carplay';
 
-CarPlay.addEventListener('didConnect', () => {
+CarPlay.addEventListener('didConnect', (event) => {
   // The CarPlay screen has connected and is ready to present content.
+  const controller = event.interfaceController;
+  const mapTemplate = CarPlay.createMapTemplate();
+  controller.setRootTemplate(mapTemplate);
+  
+  // Start a new navigation session!
+  mapTemplate.startNavigationSession({
+    origin: { latitude: 0.0, longitude: 0.0 },
+    destination: { latitude: 0.0, longitude: 0.0 },
+    routeChoices: [{
+      summaryVariants: ['Via I-280 S'],
+      additionalInformationVariants: ['Fastest Route', 'Avoids Tolls'],
+      selectionSummaryVariants: ['Turn left']
+    }]
+  });
 });
 
 CarPlay.addEventListener('didDisconnect', () => {

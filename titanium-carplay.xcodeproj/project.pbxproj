@@ -28,6 +28,10 @@
 		24DE9E1211C5FE74003F90F6 /* TiCarplayModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiCarplayModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* TiCarplay_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiCarplay_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		DB65F1C220DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB65F1C020DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.h */; };
+		DB65F1C320DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB65F1C120DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.m */; };
+		DB65F1C620DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB65F1C420DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.h */; };
+		DB65F1C720DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB65F1C520DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		AA747D9E0F9514B9006C5449 /* TiCarplay_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiCarplay_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libti.carplay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libti.carplay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB65F1C020DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCarplayInterfaceControllerProxy.h; path = Classes/TiCarplayInterfaceControllerProxy.h; sourceTree = "<group>"; };
+		DB65F1C120DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiCarplayInterfaceControllerProxy.m; path = Classes/TiCarplayInterfaceControllerProxy.m; sourceTree = "<group>"; };
+		DB65F1C420DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TiCarplayMapTemplateProxy.h; path = Classes/TiCarplayMapTemplateProxy.h; sourceTree = "<group>"; };
+		DB65F1C520DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TiCarplayMapTemplateProxy.m; path = Classes/TiCarplayMapTemplateProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +101,9 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24DE9E0F11C5FE74003F90F6 /* TiCarplayModuleAssets.h */,
-				24DE9E1011C5FE74003F90F6 /* TiCarplayModuleAssets.m */,
-				24DD6CF71134B3F500162E58 /* TiCarplayModule.h */,
-				24DD6CF81134B3F500162E58 /* TiCarplayModule.m */,
+				DB65F1CA20DB7E7F00C67DE2 /* Module */,
+				DB65F1C920DB7E7500C67DE2 /* Interface Controller */,
+				DB65F1C820DB7E5900C67DE2 /* Map Template */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -110,6 +117,35 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		DB65F1C820DB7E5900C67DE2 /* Map Template */ = {
+			isa = PBXGroup;
+			children = (
+				DB65F1C420DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.h */,
+				DB65F1C520DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.m */,
+			);
+			name = "Map Template";
+			sourceTree = "<group>";
+		};
+		DB65F1C920DB7E7500C67DE2 /* Interface Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB65F1C020DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.h */,
+				DB65F1C120DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.m */,
+			);
+			name = "Interface Controller";
+			sourceTree = "<group>";
+		};
+		DB65F1CA20DB7E7F00C67DE2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				24DE9E0F11C5FE74003F90F6 /* TiCarplayModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* TiCarplayModuleAssets.m */,
+				24DD6CF71134B3F500162E58 /* TiCarplayModule.h */,
+				24DD6CF81134B3F500162E58 /* TiCarplayModule.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* TiCarplay_Prefix.pch in Headers */,
+				DB65F1C220DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.h in Headers */,
 				24DD6CF91134B3F500162E58 /* TiCarplayModule.h in Headers */,
+				DB65F1C620DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiCarplayModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB65F1C320DB795600C67DE2 /* TiCarplayInterfaceControllerProxy.m in Sources */,
 				24DD6CFA1134B3F500162E58 /* TiCarplayModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiCarplayModuleAssets.m in Sources */,
+				DB65F1C720DB7B8000C67DE2 /* TiCarplayMapTemplateProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
