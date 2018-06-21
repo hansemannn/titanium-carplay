@@ -1,106 +1,50 @@
-Appcelerator Titanium Mobile Module Project
-===========================================
+# Titanium CarPlay
 
-This is a skeleton Titanium Mobile Mobile module project.
+Use the iOS 12+ CarPlay framework in Appcelerator Titanium.
 
+## Requirements
 
-MODULE NAMING
--------------
+- [x] Titanium SDK 7.3.0+
+- [x] iOS 12+
+- [x] Xcode 10+
 
-Choose a unique module id for your module.  This ID usually follows a namespace
-convention using DNS notation.  For example, com.appcelerator.module.test.  This
-ID can only be used once by all public modules in Titanium.
+## Features
 
+- [x] Receive events from your CarPlay instance
+- [ ] Present CarPlay-specific user-interfaces
 
-GET STARTED
-------------
+## Example
 
-1. Edit manifest with the appropriate details about your module.
-2. Edit LICENSE to add your license details.
-3. Place any assets (such as PNG files) that are required anywhere in the module folder.
-4. Edit the timodule.json and configure desired settings.
-5. Code and build.
+```js
+import CarPlay from 'ti.carplay';
 
+CarPlay.addEventListener('didConnect', () => {
+  // The CarPlay screen has connected and is ready to present content.
+});
 
-DOCUMENTATION FOR YOUR MODULE
------------------------------
+CarPlay.addEventListener('didDisconnect', () => {
+  // The CarPlay screen has disconnected.
+});
 
-You should provide at least minimal documentation for your module in `documentation` folder using the Markdown syntax.
+CarPlay.addEventListener('didSelectNavigationAlert', () => {
+  // If your application posts a `NavigationAlert` while backgrounded, 
+  // a notification banner may be presented to the user.
+});
 
-For more information on the Markdown syntax, refer to this documentation at:
+CarPlay.addEventListener('didSelectManeuver', () => {
+  // If your application posts a `Maneuver` while backgrounded, 
+  // a notification banner may be presented to the user.
+});
+```
 
-<http://daringfireball.net/projects/markdown/>
+## Author
 
+Hans Knöchel ([@hansemannnn](https://twitter.com/hansemannnn) / [Web](http://hans-knoechel.de))
 
-TEST HARNESS EXAMPLE FOR YOUR MODULE
-------------------------------------
+## License
 
-The `example` directory contains a skeleton application test harness that can be
-used for testing and providing an example of usage to the users of your module.
+MIT
 
+## Contributing
 
-BUILDING YOUR MODULE
---------------------
-
-Simply run `titanium build --platform <name of platform> --build-type production --dir /path/to/module`.
-You can omit the --dir option if your working directory is in the module's project directory.
-
-
-INSTALL YOUR MODULE
--------------------
-
-Mac OS X
---------
-Copy the distribution zip file into the `~/Library/Application Support/Titanium` folder
-
-Linux
------
-Copy the distribution zip file into the `~/.titanium` folder
-
-Windows
--------
-Copy the distribution zip file into the `C:\ProgramData\Titanium` folder
-
-
-REGISTER YOUR MODULE
---------------------
-
-Register your module with your application by editing `tiapp.xml` and adding your module.
-Example:
-
-<modules>
-	<module version="0.1">ti.carplay</module>
-</modules>
-
-When you run your project, the compiler will combine your module along with its dependencies
-and assets into the application.
-
-
-USING YOUR MODULE IN CODE
--------------------------
-
-To use your module in code, you will need to require it.
-
-For example,
-
-	var my_module = require('ti.carplay');
-	my_module.foo();
-
-
-TESTING YOUR MODULE
--------------------
-
-To test with the script, execute:
-
-	titanium run --dir=YOURMODULEDIR
-
-This will execute the app.js in the example folder as a Titanium application.
-
-
-DISTRIBUTING YOUR MODULE
--------------------------
-
-You can choose to manually distribute your module distribution zip file or through the Titanium Marketplace!
-
-
-Cheers!
+Code contributions are greatly appreciated, please submit a new [Pull-Request](https://github.com/hansemannn/titanium-carplay/pull/new/master)!
