@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: arm64 x86_64
+mac: false
+description: titanium-carplay
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2023 by Your Company
+
+# these should not be edited
+name: titanium-carplay
+moduleid: ti.carplay
+guid: 155b792e-29af-44b3-8b08-66cf0598ab47
+platform: iphone
+minsdk: 11.0.0
