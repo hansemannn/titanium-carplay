@@ -42,17 +42,7 @@
 
 #pragma Public APIs
 
-- (void)application:(nonnull UIApplication *)applicationdidConnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController toWindow:(nonnull CPMapContentWindow *)window
-{
-  if ([self _hasListeners:@"didConnect"]) {
-    [self fireEvent:@"didConnect"
-         withObject:@{
-           @"interfaceController" : [[TiCarplayInterfaceControllerProxy alloc] _initWithPageContext:self.pageContext andInterfaceController:interfaceController]
-         }];
-  }
-}
-
-- (void)application:(nonnull UIApplication *)application didDisconnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController fromWindow:(nonnull CPMapContentWindow *)window
+- (void)application:(UIApplication *)application didDisconnectCarInterfaceController:(CPInterfaceController *)interfaceController fromWindow:(CPWindow *)window
 {
   if ([self _hasListeners:@"didDisconnect"]) {
     [self fireEvent:@"didDisconnect"
@@ -73,6 +63,15 @@
 {
   if ([self _hasListeners:@"didSelectManeuver"]) {
     [self fireEvent:@"didSelectManeuver" withObject:@{@"maneuver" : @{ @"userInfo" : NULL_IF_NIL(maneuver.userInfo) }}];
+  }
+}
+
+- (void)application:(nonnull UIApplication *)application didConnectCarInterfaceController:(nonnull CPInterfaceController *)interfaceController toWindow:(nonnull CPWindow *)window { 
+  if ([self _hasListeners:@"didConnect"]) {
+    [self fireEvent:@"didConnect"
+         withObject:@{
+           @"interfaceController" : [[TiCarplayInterfaceControllerProxy alloc] _initWithPageContext:self.pageContext andInterfaceController:interfaceController]
+         }];
   }
 }
 

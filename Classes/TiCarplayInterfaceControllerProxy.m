@@ -31,10 +31,8 @@
 
 #pragma mark Public APIs
 
-- (void)setRootTemplate:(id)rootTemplate
+- (void)setRootTemplate:(TiCarplayMapTemplateProxy *)rootTemplate
 {
-  ENSURE_TYPE(rootTemplate, TiCarplayMapTemplateProxy);
-
   [_interfaceController setRootTemplate:[(TiCarplayMapTemplateProxy *)rootTemplate mapTemplate] animated:YES];
 }
 

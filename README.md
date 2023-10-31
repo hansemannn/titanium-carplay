@@ -1,12 +1,12 @@
 # Titanium CarPlay
 
-Use the iOS 12+ CarPlay framework in Appcelerator Titanium.
+Use the Apple CarPlay framework in the Titanium SDK.
 
 ## Requirements
 
-- [x] Titanium SDK 7.3.0+
-- [x] iOS 12+
-- [x] Xcode 10+
+- [x] Titanium SDK 11.0.0+
+- [x] iOS 13+
+- [x] Xcode 14+
 
 ## Features
 
@@ -21,11 +21,10 @@ Use the iOS 12+ CarPlay framework in Appcelerator Titanium.
 ```js
 import CarPlay from 'ti.carplay';
 
-CarPlay.addEventListener('didConnect', (event) => {
+CarPlay.addEventListener('didConnect', ({ interfaceController }) => {
   // The CarPlay screen has connected and is ready to present content.
-  const controller = event.interfaceController;
   const mapTemplate = CarPlay.createMapTemplate();
-  controller.setRootTemplate(mapTemplate);
+  interfaceController.setRootTemplate(mapTemplate);
   
   // Start a new navigation session!
   mapTemplate.startNavigationSession({
