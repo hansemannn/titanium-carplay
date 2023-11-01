@@ -25,16 +25,16 @@ public class TiCarplayListTemplateProxy : TiCarplayTemplateProxy {
       return []
     }
     
-    return sections.map { section in
+    return sections.enumerated().map { (sectionIndex, section) in
       if let items = section["items"] as? [[String: Any]] {
-        return CPListSection(items: items.map({ item in
+        return CPListSection(items: items.enumerated().map({ (itemIndex, item) in
           let text = item["text"] as? String
           let detailText = item["detailText"] as? String
           let handler = item["handler"] as? KrollCallback
 
           let listItem = CPListItem(text: text, detailText: detailText)
           listItem.handler = { [weak self] (item, completion) in
-            handler?.callAsync([], thisObject: self)
+            handler?.callAsync([["sectionIndex": sectionIndex, "itemIndex": itemIndex]], thisObject: self)
             completion()
           }
           

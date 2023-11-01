@@ -25,7 +25,7 @@ public class TiCarplayAlertTemplateProxy : TiCarplayTemplateProxy {
       return []
     }
     
-    return actions.map { action in
+    return actions.enumerated().map { (index, action) in
       guard let title = action["title"] as? String,
             let handler = action["handler"] as? KrollCallback else {
               fatalError("Missing action properties")
@@ -34,7 +34,7 @@ public class TiCarplayAlertTemplateProxy : TiCarplayTemplateProxy {
       let destructive = action["destructive"] as? Bool ?? false
 
       return CPAlertAction(title: title, style: destructive ? .destructive : .default) { action in
-        handler.callAsync([], thisObject: self)
+        handler.callAsync([["index": index]], thisObject: self)
       }
     }
   }
