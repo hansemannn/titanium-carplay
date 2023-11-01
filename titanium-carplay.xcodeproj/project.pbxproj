@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ADF63452AF16E8A0091A4A4 /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF63432AF16E8A0091A4A4 /* CarPlaySceneDelegate.swift */; };
-		3ADF63462AF16E8A0091A4A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF63442AF16E8A0091A4A4 /* SceneDelegate.swift */; };
+		3A5B4FA02AF1B08000451B8C /* TiCarplayListTemplateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B4F9F2AF1B08000451B8C /* TiCarplayListTemplateProxy.swift */; };
+		3A5B4FA22AF1B68A00451B8C /* TiCarplayTemplateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B4FA12AF1B68A00451B8C /* TiCarplayTemplateProxy.swift */; };
+		3A5B4FA42AF1B6C200451B8C /* TiCarplayAlertTemplateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B4FA32AF1B6C200451B8C /* TiCarplayAlertTemplateProxy.swift */; };
+		3ADF63452AF16E8A0091A4A4 /* TiCarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF63432AF16E8A0091A4A4 /* TiCarPlaySceneDelegate.swift */; };
 		3ADF63482AF16E980091A4A4 /* CarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADF63472AF16E980091A4A4 /* CarPlay.framework */; };
 		B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */; };
-		DB24E03C20766AC90033B2B1 /* TiCarplayExampleProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24E03B20766AC90033B2B1 /* TiCarplayExampleProxy.swift */; };
 		DB34CDE0207B998A005F8E8C /* TiCarplayModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34CDDE207B998A005F8E8C /* TiCarplayModuleAssets.m */; };
 		DB34CDE1207B998A005F8E8C /* TiCarplayModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34CDDF207B998A005F8E8C /* TiCarplayModuleAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34CDE5207B9EBD005F8E8C /* Foundation.framework */; };
@@ -21,11 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3ADF63432AF16E8A0091A4A4 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarPlaySceneDelegate.swift; path = Classes/CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
-		3ADF63442AF16E8A0091A4A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Classes/SceneDelegate.swift; sourceTree = "<group>"; };
+		3A5B4F9F2AF1B08000451B8C /* TiCarplayListTemplateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TiCarplayListTemplateProxy.swift; path = Classes/TiCarplayListTemplateProxy.swift; sourceTree = "<group>"; };
+		3A5B4FA12AF1B68A00451B8C /* TiCarplayTemplateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TiCarplayTemplateProxy.swift; path = Classes/TiCarplayTemplateProxy.swift; sourceTree = "<group>"; };
+		3A5B4FA32AF1B6C200451B8C /* TiCarplayAlertTemplateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiCarplayAlertTemplateProxy.swift; path = Classes/TiCarplayAlertTemplateProxy.swift; sourceTree = "<group>"; };
+		3ADF63432AF16E8A0091A4A4 /* TiCarPlaySceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiCarPlaySceneDelegate.swift; path = Classes/TiCarPlaySceneDelegate.swift; sourceTree = "<group>"; };
 		3ADF63472AF16E980091A4A4 /* CarPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarPlay.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/iOSSupport/System/Library/Frameworks/CarPlay.framework; sourceTree = DEVELOPER_DIR; };
 		B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
-		DB24E03B20766AC90033B2B1 /* TiCarplayExampleProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TiCarplayExampleProxy.swift; path = Classes/TiCarplayExampleProxy.swift; sourceTree = "<group>"; };
 		DB34CDDE207B998A005F8E8C /* TiCarplayModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiCarplayModuleAssets.m; path = Classes/TiCarplayModuleAssets.m; sourceTree = SOURCE_ROOT; };
 		DB34CDDF207B998A005F8E8C /* TiCarplayModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiCarplayModuleAssets.h; path = Classes/TiCarplayModuleAssets.h; sourceTree = SOURCE_ROOT; };
 		DB34CDE5207B9EBD005F8E8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5B4F9D2AF1B05C00451B8C /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				3A5B4FA12AF1B68A00451B8C /* TiCarplayTemplateProxy.swift */,
+				3A5B4F9F2AF1B08000451B8C /* TiCarplayListTemplateProxy.swift */,
+				3A5B4FA32AF1B6C200451B8C /* TiCarplayAlertTemplateProxy.swift */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
+		3A5B4F9E2AF1B06200451B8C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3ADF63432AF16E8A0091A4A4 /* TiCarPlaySceneDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 		DB258CA41F0964DE000D0D8D /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,10 +87,9 @@
 		DB258CA51F0964F6000D0D8D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3ADF63432AF16E8A0091A4A4 /* CarPlaySceneDelegate.swift */,
-				3ADF63442AF16E8A0091A4A4 /* SceneDelegate.swift */,
+				3A5B4F9D2AF1B05C00451B8C /* Templates */,
+				3A5B4F9E2AF1B06200451B8C /* Delegate */,
 				DB52E2421E9CD0F800AAAEE0 /* TiCarplayModule.swift */,
-				DB24E03B20766AC90033B2B1 /* TiCarplayExampleProxy.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -195,10 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADF63462AF16E8A0091A4A4 /* SceneDelegate.swift in Sources */,
-				DB24E03C20766AC90033B2B1 /* TiCarplayExampleProxy.swift in Sources */,
+				3A5B4FA22AF1B68A00451B8C /* TiCarplayTemplateProxy.swift in Sources */,
+				3A5B4FA02AF1B08000451B8C /* TiCarplayListTemplateProxy.swift in Sources */,
 				DB34CDE0207B998A005F8E8C /* TiCarplayModuleAssets.m in Sources */,
-				3ADF63452AF16E8A0091A4A4 /* CarPlaySceneDelegate.swift in Sources */,
+				3A5B4FA42AF1B6C200451B8C /* TiCarplayAlertTemplateProxy.swift in Sources */,
+				3ADF63452AF16E8A0091A4A4 /* TiCarPlaySceneDelegate.swift in Sources */,
 				DB52E2431E9CD0F800AAAEE0 /* TiCarplayModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,12 +7,11 @@
 
 import UIKit
 import CarPlay
+import TitaniumKit
 
-class CarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelegate {
+class TiCarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelegate {
   
-  private var interfaceController: CPInterfaceController?
-
-  // MARK: Connect
+  var interfaceController: CPInterfaceController?
   
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
@@ -20,6 +19,9 @@ class CarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelegate {
   
   func templateApplicationScene(_ templateApplicationScene: CPTemplateApplicationScene, didConnect interfaceController: CPInterfaceController) {
     self.interfaceController = interfaceController
+    
+    // NOTE: This is an example implementation of some common templates that could be shown as the initial state.
+    // Ideally, you should remove this piece at some point and control everything via the JS APIs
     
     // Item 1: Show child template
     let listItem1 = CPListItem(text: "List Item 1", detailText: "Hello world")
